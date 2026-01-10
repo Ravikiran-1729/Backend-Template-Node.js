@@ -19,7 +19,7 @@ It is suitable for building **scalable web applications** using an **MVC-style a
 ---
 
 ## 📁 Project Structure
-
+```
 project-root/
 │
 ├── public/ # Static assets
@@ -49,7 +49,7 @@ project-root/
 ├── package.json
 ├── package-lock.json
 └── README.md
-
+```
 
 
 
@@ -84,6 +84,7 @@ npm -v
 git clone https://github.com/<your-username>/<repository-name>.git
 cd <repository-name>
 ```
+---
 
 ### 3️⃣ Install Dependencies
 
@@ -92,7 +93,7 @@ Install all required packages:
 ```bash
 npm install
 ```
-
+---
 
 ### 4️⃣ Environment Setup
 
@@ -114,6 +115,7 @@ DB_NAME=your_database
 
 MONGO_URL=
 ```
+---
 
 ### 5️⃣ Run the Application
 
@@ -121,3 +123,4 @@ Start the server using:
 ```
 node src/server.js
 ```
+
