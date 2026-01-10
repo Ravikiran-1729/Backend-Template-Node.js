@@ -10,6 +10,14 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
 
+
+// Parses URL-encoded form data (e.g., submitted via HTML forms)
+app.use(express.urlencoded({ extended: true }));
+
+// Parses incoming JSON request bodies (e.g., API requests)
+app.use(express.json());
+
+
 // serve static files
 app.use(express.static(path.join(__dirname, "../public")));
 
