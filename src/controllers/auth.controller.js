@@ -1,16 +1,15 @@
 const express = require('express');
-const {getDB} = require('../config/db.config');
-
+const authService = require('../services/auth.service');
 
 const login = async (req, res) =>{
-    const db = getDB();
-    const [row] = await db.execute('select 1');
-
     // define login here
+
+    const data = await authService.findUser();
+
     res.send({
         status : 200,
         message : "Login Successfully",
-        data : row
+        data : data
     });
 }
 
