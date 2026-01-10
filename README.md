@@ -68,6 +68,7 @@ Check versions:
 node -v
 npm -v
 ```
+---
 
 ## 🚀 Getting Started
 
@@ -123,4 +124,5 @@ Start the server using:
 ```
 node src/server.js
 ```
+
 
