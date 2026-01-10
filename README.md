@@ -22,7 +22,7 @@ It is suitable for building **scalable web applications** using an **MVC-style a
 ```
 project-root/
 │
-├── public/ # Static assets
+├── public/              # Static assets
 │ ├── CSS/
 │ ├── Fonts/
 │ ├── Icons/
@@ -30,22 +30,22 @@ project-root/
 │ └── JS/
 │
 ├── src/
-│ ├── config/ # Configuration files (DB, env, etc.)
-│ ├── controllers/ # Request handlers / business logic
-│ ├── middlewares/ # Custom middleware
-│ ├── routes/ # Express routes
-│ ├── services/ # Service-layer logic
-│ ├── app.js # Express app configuration
-│ └── server.js # Server entry point
+│ ├── config/            # Configuration files (DB, env, etc.)
+│ ├── controllers/       # Request handlers / business logic
+│ ├── middlewares/       # Custom middleware
+│ ├── routes/            # Express routes
+│ ├── services/          # Service-layer logic
+│ ├── app.js             # Express app configuration
+│ └── server.js          # Server entry point
 │
-├── views/ # EJS templates
+├── views/               # EJS templates
 │ ├── Layouts/
 │ ├── Pages/
 │ ├── Partials/
 │ └── error.ejs
 │
-├── .env # Environment variables (ignored in git)
-├── .env.example # Environment template
+├── .env                 # Environment variables (ignored in git)
+├── .env.example         # Environment template
 ├── package.json
 ├── package-lock.json
 └── README.md
@@ -124,5 +124,6 @@ Start the server using:
 ```
 node src/server.js
 ```
+
 
 
