@@ -1,7 +1,7 @@
-const {getDB} = require('../config/db.config');
+const {getPool} = require('../config/db.config');
 
 const findUser = async () =>{
-    const db = getDB();
+    const db = getPool();
 
     const [rows] = await db.execute('SELECT 1');
 
