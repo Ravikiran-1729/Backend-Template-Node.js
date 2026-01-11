@@ -163,12 +163,14 @@ http://localhost:3000
 {
   "authorization": "token_aasdfghjklwertyuio"
 }
+```
 ---
 
 ### 📌 Notes
 - 🔒 Protected routes require authentication
 - 📦 Request and response format is JSON
 - ⚙️ Ensure the server is running before making requests
+
 
 
 
