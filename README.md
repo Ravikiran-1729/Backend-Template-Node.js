@@ -160,7 +160,7 @@ http://localhost:3000
 ### 🔐 Authorization Header (Required for `/auth/profile`)
 
 ```json
-{
+headers : {
   "authorization": "token_aasdfghjklwertyuio"
 }
 ```
@@ -170,6 +170,7 @@ http://localhost:3000
 - 🔒 Protected routes require authentication
 - 📦 Request and response format is JSON
 - ⚙️ Ensure the server is running before making requests
+
 
 
 
