@@ -126,4 +126,50 @@ node src/server.js
 ```
 
 
+---
+
+## 🚀 API Endpoints
+
+The following RESTful API endpoints are available in this application:
+
+### 🔐 Authentication Routes
+
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| `POST` | `/auth/register` | 📝 Register a new user |
+| `POST` | `/auth/login` | 🔑 Authenticate user and issue token |
+| `GET` | `/auth/profile` | 👤 Retrieve authenticated user profile *(Requires Authorization Header)*  |
+
+---
+
+### 🏠 General Routes
+
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| `GET` | `/home` | 🏡 Access home endpoint |
+
+---
+
+### 🌐 Base URL
+
+```
+http://localhost:3000
+```
+--- 
+
+### 🔐 Authorization Header (Required for `/auth/profile`)
+
+```json
+{
+  "authorization": "token_aasdfghjklwertyuio"
+}
+---
+
+### 📌 Notes
+- 🔒 Protected routes require authentication
+- 📦 Request and response format is JSON
+- ⚙️ Ensure the server is running before making requests
+
+
+
 
