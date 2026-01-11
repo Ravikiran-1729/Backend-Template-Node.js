@@ -27,23 +27,25 @@ let pool;
 const connectDB = async () =>{
     if(pool) return pool;
 
-    try {
-        pool = mysql.createPool({
-            host : process.env.DB_HOST,
-            user : process.env.DB_USER,
-            password : process.env.DB_PASSWORD,
-            database : process.env.DB_NAME,
-            waitForConnections : true,
-            connectionLimit : 10,
-            queueLimit : 0
-        });
+    pool = mysql.createPool({
+        host : process.env.DB_HOST,
+        user : process.env.DB_USER,
+        password : process.env.DB_PASSWORD,
+        database : process.env.DB_NAME,
+        waitForConnections : true,
+        connectionLimit : 10,
+        queueLimit : 0
+    });
 
+    try {
         const conn = await pool.getConnection();
-        conn.release();
 
         console.log("MySQL connected successfully");
 
+        conn.release();
+
         return pool;
+
     } catch (error) {
         console.error("MySQL connection failed :", error.message);
         process.exit(1);
@@ -51,7 +53,7 @@ const connectDB = async () =>{
 };
 
 
-const getDB = () =>{
+const getPool = () =>{
     if(!pool){
         throw new Error("Database not initialized!");
     }
@@ -70,5 +72,5 @@ connectDB();
 
 module.exports = {
     connectDB,
-    getDB
+    getPool
 };
